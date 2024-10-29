@@ -4,13 +4,13 @@ body {
 
 
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
@@ -28,8 +28,7 @@ body {
 }
 
 
-.publication-title {
-}
+.publication-title {}
 
 .publication-banner {
   max-height: parent;
@@ -44,71 +43,66 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
+.publication-header .hero-body {}
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
-.publication-authors {
-}
+.publication-authors {}
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
+.publication-banner img {}
 
 .publication-authors {
   /*color: #4286f4;*/
 }
 
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+.publication-body img {}
 
 .results-carousel {
   overflow: hidden;
@@ -117,21 +111,74 @@ body {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  padding: 20px;
+  /* padding: 10px; */
   font-size: 0;
+}
+
+.spaced {
+  margin-top: 25px;
+  /* Adjust the value as needed */
 }
 
 .results-carousel video {
   margin: 0;
 }
 
-.slider-pagination .slider-page {
+
+/* .slider-pagination .slider-page {
   background: #000000;
+} */
+
+
+.slider-pagination .slider-page {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 10px;
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: smaller;
 }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.baseline {
+  grid-column: span 1;
+}
+
+.my-alg {
+  grid-column: span 2;
+  grid-row: span 2;
+  place-self: center;
+}
 
 
+.page {
+  /* display: none; */
+  /* 默认隐藏 */
+  width: 100%;
+  /* 使页面完全占满父容器 */
+}
+
+.page.active {
+  display: flex;
+  /* 激活的页面显示 */
+  justify-content: space-around;
+}
+
+.carousel-btn {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+}
+
+.carousel-content {
+  overflow: hidden;
+}
