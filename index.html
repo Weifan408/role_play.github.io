@@ -25,8 +25,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Role Play</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -36,6 +36,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -52,7 +55,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Role-Play: Learning Adaptive Role-Specific Strategies in
+            <h1 class="title is-1 publication-title">Role Play: Learning Adaptive Role-Specific Strategies in
               Multi-Agent Interactions</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -69,14 +72,14 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
-                <!-- <span class="link-block">
+                <span class="link-block">
                   <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
-                </span> -->
+                </span>
 
                 <!-- Supplementary PDF link -->
                 <!-- <span class="link-block">
@@ -143,22 +146,23 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Zero-shot multi-agent reinforcement learning (MARL) problems which require agents to adapt to unseen
-              agents have attracted increasing attention. Traditional approaches often build a policy pool through
-              Self-Play (SP) framework, and then train the final agent using this pool. However, these frameworks can
-              fall short in capturing the full spectrum of potential strategies, particularly in real-world scenarios
-              with mixed incentives, similar to those encountered in mixed-motive games. The complexity of mixed-motive
-              games requires a more diverse training partner population because the imperfect correlation of incentives
-              among group members demands strategies that can adapt to varying and often conflicting goals.Drawing
-              inspiration from Social Value Orientation (SVO), in which individuals maintain stable orientations in
-              interactions with others, we propose a novel framework named Role-Play (RP). RP employing role
-              embedding to converts the challenge of population diversity into a more manageable diversity of roles. It
-              trains a common policy with a role embedding observation and uses a role predictor to estimate the joint
-              role embeddings of other agents, aiding the learning agent in adapting to its assigned role. We
-              theoretically prove the necessity of the role predictor in this process. We demonstrate the performance of
-              RP on cooperative games (Overcooked) and mixed-motive games (Harvest, CleanUp). Our results show that RP
-              consistently outperforms strong baselines in scenarios involving unseen agents, demonstrating its
-              robustness and adaptability in diverse interaction settings.
+              Zero-shot coordination problem in multi-agent reinforcement learning (MARL), which requires agents to
+              adapt to unseen agents, has attracted increasing attention. Traditional approaches often rely on the
+              Self-Play (SP) framework to generate a diverse set of policies in a policy pool, which serves to improve
+              the generalization capability of the final agent. However, these frameworks may struggle to capture the
+              full spectrum of potential strategies, especially in real-world scenarios that demand agents balance
+              cooperation with competition. In such settings, agents need strategies that can adapt to varying and often
+              conflicting goals.
+              Drawing inspiration from Social Value Orientation (SVO)—where individuals maintain stable value
+              orientations during interactions with others—we propose a novel framework called Role Play (RP). RP
+              employs role embeddings to transform the challenge of policy diversity into a more manageable diversity of
+              roles. It trains a common policy with role embeddings observation and employ a role predictor to estimate
+              the joint role embeddings of other agents, helping the learning agent adapt to its assigned role. We
+              theoretically prove that an approximate optimal policy can be achieved by optimizing the expected
+              cumulative reward relative to an approximate role-based policy. Experimental results in both cooperative
+              (Overcooked) and mixed-motive games (Harvest, CleanUp) reveal that RP consistently outperforms strong
+              baselines when interacting with unseen agents, highlighting its robustness and adaptability in complex
+              environments.
             </p>
           </div>
         </div>
@@ -560,55 +564,178 @@
               </h2>
             </div>
           </div>
-          <h1 class="title is-3 spaced">MeltingPot</h1>
+          <h3 class="title is-3 spaced">MeltingPot</h3>
           <h4 class="subtitle is-4">Harvest</h4>
-          <div class="container-grid">
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 1" />
-              <h2 class="subtitle has-text-centered">Baseline 1</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item" id="page-1">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/collective_reward/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/collective_reward/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/harvest/collective_reward/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/collective_reward/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/collective_reward/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Prosocial</em></strong> pre-trained agent
+              </h2>
             </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 2" />
-              <h2 class="subtitle has-text-centered">Baseline 2</h2>
+            <div class="item" id="page-2">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/inequity/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/inequity/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/harvest/inequity/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/inequity/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/inequity/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Inequity-Averse </em></strong> pre-trained agent
+              </h2>
             </div>
-            <div class="my-alg">
-              <img src="static/images/framework_2.png" alt="My Algorithm" />
-              <h2 class="subtitle has-text-centered">My Algorithm</h2>
-            </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 3" />
-              <h2 class="subtitle has-text-centered">Baseline 3</h2>
-            </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 4" />
-              <h2 class="subtitle has-text-centered">Baseline 4</h2>
+            <div class="item" id="page-3">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/selfish/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/selfish/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/harvest/selfish/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/selfish/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/harvest/selfish/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Selfish </em></strong> pre-trained agent
+              </h2>
             </div>
           </div>
-          <h4 class="subtitle is-5 spaced">CleanUp</h4>
-          <div class="container-grid">
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 1" />
-              <h2 class="subtitle has-text-centered">Baseline 1</h2>
+          <h4 class="subtitle is-4 spaced">CleanUp</h4>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item" id="page-1">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/collective_reward/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/collective_reward/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/cleanup/collective_reward/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/collective_reward/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/collective_reward/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Prosocial </em></strong> pre-trained agent
+              </h2>
             </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 2" />
-              <h2 class="subtitle has-text-centered">Baseline 2</h2>
+            <div class="item" id="page-2">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/inequity/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/inequity/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/cleanup/inequity/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/inequity/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/inequity/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Inequity-Averse </em></strong> pre-trained agent
+              </h2>
             </div>
-            <div class="my-alg">
-              <img src="static/images/framework_2.png" alt="My Algorithm" />
-              <h2 class="subtitle has-text-centered">My Algorithm</h2>
-            </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 3" />
-              <h2 class="subtitle has-text-centered">Baseline 3</h2>
-            </div>
-            <div class="baseline">
-              <img src="static/images/framework_2.png" alt="Baseline 4" />
-              <h2 class="subtitle has-text-centered">Baseline 4</h2>
+            <div class="item" id="page-3">
+              <div class="container-grid">
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/selfish/anyplay.gif" alt="Baseline 1" />
+                  <h2 class="subtitle has-text-centered">Anyplay</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/selfish/brdiv.gif" alt="Baseline 2" />
+                  <h2 class="subtitle has-text-centered">BRDiv</h2>
+                </div>
+                <div class="my-alg">
+                  <img src="static/images/meltingpot/cleanup/selfish/rp.gif" alt="My Algorithm" />
+                  <h2 class="subtitle has-text-centered">RP (\( z=\frac{\pi}{4} \))</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/selfish/trajedi.gif" alt="Baseline 3" />
+                  <h2 class="subtitle has-text-centered">TrajeDi</h2>
+                </div>
+                <div class="baseline">
+                  <img src="static/images/meltingpot/cleanup/selfish/hsp.gif" alt="Baseline 4" />
+                  <h2 class="subtitle has-text-centered">HSP</h2>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Evaluate with <strong><em> Selfish </em></strong> pre-trained agent
+              </h2>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
 
@@ -647,18 +774,6 @@
           </div>
           <div class="item item-video2">
             <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-  <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
-  </video>
-  </div>
-  <div class="item item-video3">
-    <video poster="" id="video3" autoplay controls muted loop height="100%">\
-      <source src="static/videos/carousel3.mp4" type="video/mp4">
-    </video>
-  </div>
-  </div>
-  </div>
-  </div> -->
   </section> -->
   <!-- End video carousel -->
 
