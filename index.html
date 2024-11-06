@@ -106,7 +106,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/" target="_blank"
+                  <a href="http://arxiv.org/abs/2411.01166" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -205,7 +205,18 @@
         <h2 class="title is-2">Experimental Results</h2>
         <div class="container">
           <h3 class="title is-3">Overcooked</h3>
-          <h4 class="subtitle is-4">Asymmetric Advantages</h4>
+          <p>
+            <strong>Overcooked</strong> is a two-player cooperative game intended to test the collaboration
+            ability of agents. In this game, agents work collaboratively to fulfill soup orders using ingredients like
+            onions and tomatoes. Agents can move and interact with items, such as grabbing or serving soups, based on
+            the
+            game state. To complete an order, agents must combine the correct ingredients in a pot, cook them for a
+            specified time, and then serve the soup with a dish to earn rewards. Each order has distinct cooking times
+            and
+            rewards.
+          </p>
+          <h4 class="subtitle is-4 spaced">Asymmetric Advantages</h4>
+          <img src="static/images/overcooked/players.png" alt="ok_players" width="350" />
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item" id="page-1">
               <div class="container-grid">
@@ -300,6 +311,7 @@
             </div>
           </div>
           <h4 class="subtitle is-4 spaced">Cramped Room</h4>
+          <img src="static/images/overcooked/players.png" alt="ok_players" width="350" />
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item" id="page-1">
               <div class="container-grid">
@@ -389,6 +401,7 @@
             </div>
           </div>
           <h4 class="subtitle is-4 spaced">Counter Circuit</h4>
+          <img src="static/images/overcooked/players.png" alt="ok_players" width="350" />
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item" id="page-1">
               <div class="container-grid">
@@ -566,7 +579,15 @@
             </div>
           </div>
           <h3 class="title is-3 spaced">MeltingPot</h3>
-          <h4 class="subtitle is-4">Harvest</h4>
+          <h4 class="subtitle is-4 spaced">Harvest</h4>
+          <p>
+            <strong>Harvest</strong>: agents face a <em>common-pool resource dilemma</em> where apple resources
+            regenerate more effectively when left unharvested in groups. Agents can choose to harvest aggressively,
+            risking future availability, or sustainably, by leaving some apples to promote long-term regeneration.
+            Additionally, agents can use beams to penalize others, causing the penalized agent to temporarily disappear
+            from the game for a few steps.
+          </p>
+          <img src="static/images/meltingpot/harvest/players.png" alt="hp_players" width="350" />
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item" id="page-1">
               <div class="container-grid">
@@ -651,6 +672,13 @@
             </div>
           </div>
           <h4 class="subtitle is-4 spaced">CleanUp</h4>
+          <p>
+            <strong>CleanUp</strong>: a <em>public goods game</em> in which apple growth in an orchard is hindered by
+            rising pollution levels in a nearby river. When pollution is high, apple growth stops entirely. Agents can
+            reduce pollution by leaving the orchard to work in polluted areas, highlighting the importance of individual
+            efforts in maintaining shared resources. Agents are also able to use beams to penalize others.
+          </p>
+          <img src="static/images/meltingpot/cleanup/players.png" alt="hp_players" width="350" />
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item" id="page-1">
               <div class="container-grid">
@@ -802,7 +830,15 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{long2024roleplaylearningadaptive,
+        title={Role Play: Learning Adaptive Role-Specific Strategies in Multi-Agent Interactions}, 
+        author={Weifan Long and Wen Wen and Peng Zhai and Lihua Zhang},
+        year={2024},
+        eprint={2411.01166},
+        archivePrefix={arXiv},
+        primaryClass={cs.MA},
+        url={https://arxiv.org/abs/2411.01166}, 
+  }</code></pre>
     </div>
   </section>
   <!--End BibTex citation -->
