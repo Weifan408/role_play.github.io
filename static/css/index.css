@@ -182,3 +182,28 @@ body {
 .carousel-content {
   overflow: hidden;
 }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.video-cell {
+  width: 100%;
+  height: auto;
+}
+
+.video-grid video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
